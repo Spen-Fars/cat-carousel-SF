@@ -26,9 +26,19 @@
         <!-- Page content-->
         <div class="container mt-5">
 
-        
+        <form method="get" action="carousel.php">
 
+            <input type="select" name="myselect">
 
+                <option value="1">one</option>
+                <option value="2">two</option>
+                <option value="3">three</option>
+
+            </input>
+
+            <input type="submit" value="click here">
+
+        </form>
 
 
         </div>
