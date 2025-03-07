@@ -12,7 +12,7 @@
    rel="stylesheet" crossorigin="anonymous"
    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3">
    <link hre"css/style.css" rel="stylesheet">
-   
+
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -28,19 +28,14 @@
         <!-- Page content-->
         <div class="container mt-5">
 
-        <form method="get" action="carousel.php">
+        <span class="rating"> 
+            <i class="fa-solid fa-star"></i> 
+            <i class="fa-solid fa-star"></i> 
+            <i class="fa-solid fa-star"></i> 
+            <i class="fa-solid fa-star"></i> 
+            <i class="fa-regular fa-star"></i> 
+        </span>
 
-            <input type="select" name="myselect">
-
-                <option value="1">one</option>
-                <option value="2">two</option>
-                <option value="3">three</option>
-
-            </input>
-
-            <input type="submit" value="click here">
-
-        </form>
 
 
         </div>
