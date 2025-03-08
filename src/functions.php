@@ -4,6 +4,22 @@ session_start(); /* this allows you to save data in $_SESSION */
 
 /* write PHP functions here */
 
+function test() {
+
+    $value="test";
+    return $value;
+
+
+}
+
+function apiCall() {
+    $data=file_get_contents("https://api.thecatapi.com/v1/breeds?api_key=APIKEY");
+    return json_decode($data);
+
+
+
+
+}
 
 
 ?>
