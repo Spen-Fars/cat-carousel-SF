@@ -3,7 +3,7 @@ include("src/functions.php");
 
 $fromTest=test();
 
-$data=call
+$data=call;
 
 ?>
 <!DOCTYPE html>
@@ -36,33 +36,30 @@ $data=call
         <!-- Page content-->
         <div class="container mt-5">
 
-        <pre>
-        <?php
+            <div id="title"><h2><b>Cat Carousel</b></h2></div>
+            Select a cat breed:
+            
+            <pre>
+            <?php
 
-            var_dump()
+                var_dump($data);
 
-        ?>
-        </pre>
+            ?>
+            </pre>
 
-        <form method="get" action="carousel.php">
+            <form method="get" action="carousel.php">
 
-            <option></option>
-            <option></option>
-            <option></option>
+                <input type="submit" value="click here">
 
-        </form>
+                <?php
+                // echo $fromTest;
+                // echo "<p>$fromTest</p>";
 
+                ?>
 
-        <?php
-            // echo $fromTest;
-            // echo "<p>$fromTest</p>";
-
-        ?>
-
-
-
-        <div>The value of fromTest is <?= $fromTest ?> </div>
-
+            </form>
+            
+            <div>The value of fromTest is <?= $fromTest ?> </div>
 
         </div>
         <!-- Bootstrap core JS-->

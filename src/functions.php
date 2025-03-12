@@ -14,7 +14,10 @@ function test() {
 
 function apiCall() {
     $data=file_get_contents("https://api.thecatapi.com/v1/breeds?api_key=APIKEY");
-    return json_decode($data);
+    $object=json_decode($data);
+    var_dump($object);
+
+    return $object;
 
 
 
