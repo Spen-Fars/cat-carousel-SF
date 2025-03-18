@@ -1,9 +1,10 @@
 <?php 
 include("src/functions.php");
+include("config/config.php");
 
 $fromTest=test();
 
-$data=call;
+$data=apiCall();
 
 ?>
 <!DOCTYPE html>
@@ -28,38 +29,40 @@ $data=call;
             <div class="container">
                 <a class="navbar-brand" href="index.php">Cat Carousel</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">              </div>
             </div>
         </nav>
+
         <!-- Page content-->
         <div class="container mt-5">
 
             <div id="title"><h2><b>Cat Carousel</b></h2></div>
+
             Select a cat breed:
-            
-            <pre>
-            <?php
+            <div class="container">
 
-                var_dump($data);
+                <form method="get" action="carousel.php">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <select class="form-select" aria-label="Default select example" name="cat_Id">
+                                <option selected>Open this select menu</option>
+                                <?php
+                                    foreach($data as $cat) {
+                                        $id = $cat -> id;
+                                        $name = $cat -> name;
+                                        echo "<option value='$id'>$name</option>";
+                                    }
+                                ?>
+                            </select>
+                        </div>
+                        
+                        <div class="col-sm-6">
+                                <input type="submit" value="See cats">
+                        </div>
+                    </div>
+                </form>
 
-            ?>
-            </pre>
-
-            <form method="get" action="carousel.php">
-
-                <input type="submit" value="click here">
-
-                <?php
-                // echo $fromTest;
-                // echo "<p>$fromTest</p>";
-
-                ?>
-
-            </form>
-            
-            <div>The value of fromTest is <?= $fromTest ?> </div>
+            </div>
 
         </div>
         <!-- Bootstrap core JS-->
@@ -67,6 +70,7 @@ $data=call;
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+        
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
